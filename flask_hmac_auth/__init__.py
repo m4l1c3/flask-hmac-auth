@@ -4,7 +4,10 @@ import base64
 import time
 import random
 import os
+from flask import request
 from functools import wraps
+
+nonces = []
 
 def authenticate_request(request):
     if request.environ['HTTP_AUTHORIZATION'] is not None:

@@ -10,7 +10,7 @@ from functools import wraps
 nonces = []
 
 def authenticate_request(request):
-    if request.environ['HTTP_AUTHORIZATION'] is not None:
+    if 'HTTP_AUTHORIZATION' in request.environ:
         parts = request.environ['HTTP_AUTHORIZATION'].split(":")
         secret = bytes(os.getenv('APIKEY'), 'utf-8')
         max_time = 20

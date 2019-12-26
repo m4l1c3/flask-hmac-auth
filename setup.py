@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name = 'flask_hmac_auth_m4l1c3',
-    version = '1.0.7',
+    version = '1.0.8',
     description = 'A Flask middleware for HMAC request auth',
     author = 'm4l1c3',
     author_email = 'm4l1c3@tutanota.com',
